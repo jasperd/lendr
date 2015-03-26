@@ -4,7 +4,7 @@ defined('_JEXEC') or die('Restricted access');
 
 class LendrHelpersStyle
 {
-	function load()
+	static function load()
 	{
 		$document = JFactory::getDocument();
 
