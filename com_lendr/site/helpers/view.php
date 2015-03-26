@@ -4,7 +4,7 @@ defined('_JEXEC') or die('Restricted access');
 
 class LendrHelpersView
 {
-	function load($viewName, $layoutName='default', $viewFormat='html', $vars=null)
+	static function load($viewName, $layoutName='default', $viewFormat='html', $vars=null)
 	{
 		// Get the application
 		$app = JFactory::getApplication();
@@ -38,7 +38,7 @@ class LendrHelpersView
 		return $view;
 	}
 
-	function getHtml($view, $layout, $item, $data)
+	static function getHtml($view, $layout, $item, $data)
 	{
 		$objectView = LendrHelpersView::load($view, $layout, 'phtml');
   		$objectView->$item = $data;
